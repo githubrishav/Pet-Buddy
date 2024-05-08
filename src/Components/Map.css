@@ -1,0 +1,22 @@
+
+.map-container {
+        height: 400px;
+        width: 100%;
+        position: relative;
+      }
+      
+      .map-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .map-error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+      }
+      
