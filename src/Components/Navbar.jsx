@@ -41,7 +41,7 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         } md:hidden bg-black text-white`}
       >
-        <Link to="/" className="block px-4 py-2" onClick={toggleMenu}>
+        <Link to="/" className=" px-4 py-2" onClick={toggleMenu}>
           Home
         </Link>
         <Link to="/about" className="block px-4 py-2" onClick={toggleMenu}>
