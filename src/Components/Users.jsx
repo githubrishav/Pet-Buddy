@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Camera from "./Camera";
 import ImageUploader from "./ImageUploader";
+import MapComponent from "./MapComponent";
 
 const Users = () => {
   const [name, setName] = useState("");
@@ -33,25 +34,21 @@ const Users = () => {
 
   return (
     <div className="w-full min-h-screen bg-bg-image flex justify-center items-center bg-no-repeat bg-cover bg-center p-4">
-      <div className="w-full max-w-7xl h-auto lg:h-auto opacity-85 border border-gray-100 rounded-2xl shadow-2xl bg-white flex flex-col lg:flex-row overflow-hidden">
-        <div className="w-full lg:w-1/2 h-full p-8 flex flex-col justify-around items-center ">
-          <div className="w-full max-w-sm h-auto">
-            <p>
+      <div className="w-full h-auto lg:h-auto opacity-85 border border-gray-100 rounded-2xl shadow-2xl bg-white flex flex-col lg:flex-row overflow-hidden">
+        <div className="w-full lg:w-1/2 h-full p-8 flex flex-col justify-between bg-slate-700 items-center ">
+          <div className="w-full h-[50%] bg-red-800">
+            <div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
               eveniet iste repudiandae, dolorem praesentium consequuntur impedit
               unde, quaerat consequatur consectetur corrupti, dolores
               perferendis doloribus voluptatem eum excepturi? Eius unde dolores
               explicabo fuga numquam, ad aspernatur.
-            </p>
+            </div>
           </div>
-          <div className="w-full max-w-sm h-auto">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur provident inventore voluptatem eaque rem beatae quasi
-              in? Incidunt, facilis aspernatur laborum neque obcaecati tempora
-              repellendus magni fugit, blanditiis eaque atque inventore eius
-              ullam, ex architecto!
-            </p>
+          <div className="w-full h-[50%] bg-yellow-300">
+            <div>
+              <MapComponent/>
+            </div>
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-auto lg:h-full bg-[#90adcb] p-8 flex flex-col justify-center">
