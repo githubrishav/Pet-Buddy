@@ -68,7 +68,7 @@ const Users = () => {
         </div>
         <div className="w-full lg:w-1/2 h-auto lg:h-full bg-[#90adcb] p-8 flex flex-col justify-center">
           <h1 className="font-bold font-mono text-center mb-4">
-            Fill the form to get nearest
+            Fill the form to get nearest Aid & Help
           </h1>
           <form
             action="#"
