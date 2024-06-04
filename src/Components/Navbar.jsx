@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="bg-black text-white sticky top-0 left-0 z-10 w-full">
       <div className="flex justify-between items-center px-4 py-6">
-        <div className="text-lg font-bold">Ani Buddy</div>
+        <div className="text-lg font-bold">PetBuddy</div>
         <div className="hidden md:flex gap-12">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Camera from "./Camera";
 import ImageUploader from "./ImageUploader";
 import MapComponent from "./MapComponent";
+import axios from "axios";
 
 const Users = () => {
   const [name, setName] = useState("");
@@ -27,25 +28,39 @@ const Users = () => {
     console.log(evt.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    console.log("button clicked");
+    const response = await axios.post('https://petbudyyapi.onrender.com/api/v1/register',{
+        name: name,
+        phoneNumber: number,
+        email: mail,
+        message: msg,
+        location : "Location yet to be found!"
+    },{
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(()=>{
+      alert("Form submitted!");
+      setName("");
+      setNumber("");
+      setMail("");
+      setMsg("");
+    }).catch((err)=>{
+      alert(err.message);
+    })
   };
 
   return (
     <div className="w-full min-h-screen bg-bg-image flex justify-center items-center bg-no-repeat bg-cover bg-center p-4">
       <div className="w-full h-auto lg:h-auto opacity-85 border border-gray-100 rounded-2xl shadow-2xl bg-white flex flex-col lg:flex-row overflow-hidden">
-        <div className="w-full lg:w-1/2 h-full p-8 flex flex-col justify-between bg-slate-700 items-center ">
-          <div className="w-full h-[50%] bg-red-800">
+        <div className="w-full lg:w-1/2 h-[12rem] p-8 flex flex-col justify-between items-center ">
+          <div className="w-full h-[50%]">
             <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              eveniet iste repudiandae, dolorem praesentium consequuntur impedit
-              unde, quaerat consequatur consectetur corrupti, dolores
-              perferendis doloribus voluptatem eum excepturi? Eius unde dolores
-              explicabo fuga numquam, ad aspernatur.
+             <p className="font-bold text-center pb-12 text-3xl">Get Nearest Aid</p>
             </div>
           </div>
-          <div className="w-full h-[50%] bg-yellow-300">
+          <div className="w-full h-[10%]">
             <div>
               <MapComponent/>
             </div>
