@@ -54,7 +54,7 @@ const Users = () => {
   return (
     <div className="w-full min-h-screen bg-bg-image flex justify-center items-center bg-no-repeat bg-cover bg-center p-4">
       <div className="w-full h-auto lg:h-auto opacity-85 border border-gray-100 rounded-2xl shadow-2xl bg-white flex flex-col lg:flex-row overflow-hidden">
-        <div className="w-full lg:w-1/2 h-full p-8 flex flex-col justify-between bg-slate-700 items-center ">
+        <div className="w-full lg:w-1/2 h-full p-8 flex flex-col justify-between  items-center ">
           <div className="w-full h-[50%]">
             <div>
              <p className="font-bold text-center pb-12 text-3xl">Get Nearest Aid</p>
